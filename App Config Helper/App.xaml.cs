@@ -6,8 +6,8 @@ namespace UI
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow window = new MainWindow();
-            window.Show();
+            //MainWindow window = new MainWindow();
+            //window.Show();
         }
     }
 }

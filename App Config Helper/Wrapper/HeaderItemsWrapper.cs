@@ -14,7 +14,7 @@ namespace UI.Wrapper
 
         public bool IsChanged
         {
-            get { return _isChanged; }
+            get => _isChanged;
             private set
             {
                 _isChanged = value;
@@ -24,7 +24,7 @@ namespace UI.Wrapper
 
         public string Path
         {
-            get { return Model.Path; }
+            get => Model.Path;
             set
             {
                 Model.Path = value;
@@ -34,7 +34,7 @@ namespace UI.Wrapper
 
         public string ConfigType
         {
-            get { return Model.ConfigType; }
+            get => Model.ConfigType;
             set
             {
                 Model.ConfigType = value;
@@ -44,7 +44,7 @@ namespace UI.Wrapper
 
         public string FilterProperty
         {
-            get { return Model.FilterProperty; }
+            get => Model.FilterProperty;
             set
             {
                 Model.FilterProperty = value;

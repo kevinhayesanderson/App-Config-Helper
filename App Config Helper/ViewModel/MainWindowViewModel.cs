@@ -13,10 +13,7 @@
 
         public IHeaderViewModel HeaderViewModel
         {
-            get
-            {
-                return _headerViewModel;
-            }
+            get => _headerViewModel;
             set
             {
                 _headerViewModel = value;

@@ -7,7 +7,7 @@
             App,
             Web
         }
-        public static readonly string[] configFileTypes = { "App", "app", "Web", "web" };
-        public const string fileExtention = "config";
+        public static readonly string[] ConfigFileTypes = { "App", "app", "Web", "web" };
+        public const string FileExtention = "config";
     }
 }

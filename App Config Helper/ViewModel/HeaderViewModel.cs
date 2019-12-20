@@ -6,12 +6,9 @@ namespace UI.ViewModel
     {
         private HeaderItemsWrapper _headerItems;
 
-        public HeaderItemsWrapper HeaderItems
+        private HeaderItemsWrapper HeaderItems
         {
-            get
-            {
-                return _headerItems;
-            }
+            get => _headerItems;
             set
             {
                 _headerItems = value;

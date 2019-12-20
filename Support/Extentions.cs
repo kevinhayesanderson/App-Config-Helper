@@ -9,26 +9,17 @@ namespace Support
     {
         public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
         {
-            foreach (T item in enumeration)
-            {
-                action(item);
-            }
+            foreach (var item in enumeration) action(item);
         }
 
         public static async Task ForEachAsync<T>(this IEnumerable<T> enumeration, Func<T, Task> func)
         {
-            foreach (T item in enumeration)
-            {
-                await func(item);
-            }
+            foreach (var item in enumeration) await func(item);
         }
 
-        public static void ForEachXML<XmlNode>(this XmlNodeList nodeList, Action<XmlNode> action)
+        public static void ForEachXml<TXmlNode>(this XmlNodeList nodeList, Action<TXmlNode> action)
         {
-            foreach (XmlNode node in nodeList)
-            {
-                action(node);
-            }
+            foreach (TXmlNode node in nodeList) action(node);
         }
     }
 }
