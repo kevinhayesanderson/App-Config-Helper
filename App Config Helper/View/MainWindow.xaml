@@ -1,0 +1,48 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns:uc ="clr-namespace:UI.UserControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Config Helper"
+        Height="650" Width="760" MinHeight="650" MinWidth="760"
+        WindowStartupLocation="CenterScreen"
+        Background="Black"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Name="mainHeader" Orientation="Horizontal" Margin="2" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="2.5" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Visible" Background="Black">
+                <Label Content="Workplace Folder Path:" Foreground="White"></Label>
+                <uc:BrowseFolder  Margin="2.5" Height="20" IsEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400"
+                    Text="{Binding Path=LogFolder}" Description="Workplace Folder"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="2.5" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Visible" Background="Black">
+                <Label Content="Select Config Type:" Foreground="White"></Label>
+                <ComboBox x:Name="configType" Margin="2.5" Height="24" IsEnabled="True" IsReadOnly="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="60">
+                    <ComboBoxItem IsSelected="True" Tag="All" Content="All" HorizontalAlignment="Left"/>
+                    <ComboBoxItem Tag="App" Content="App" HorizontalAlignment="Left"/>
+                    <ComboBoxItem Tag="Web" Content="Web" HorizontalAlignment="Left"/>
+                </ComboBox>
+            </StackPanel>
+        </WrapPanel>
+        <WrapPanel Name="filter" Orientation="Horizontal" Margin="2" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal" Margin="2.5" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Visible" Background="Black">
+                <Label Content="Filter by &lt;Property&gt;:" Foreground="White"></Label>
+                <ComboBox x:Name="filterTag" Margin="2.5" Height="24" IsEnabled="True" IsReadOnly="False" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150">
+                    <ComboBoxItem IsSelected="True" Tag="None" Content="None" HorizontalAlignment="Left"/>
+                </ComboBox>
+            </StackPanel>
+        </WrapPanel>
+        <TextBlock Text="Created by Kevin Hayes Anderson" Grid.Column="1" Grid.Row="4" Margin="5" Foreground="OrangeRed"/>
+    </Grid>
+</Window>
